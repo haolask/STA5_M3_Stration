@@ -1,0 +1,12 @@
+reset
+stop
+
+######################################
+# Release L2 cache standby			##
+######################################
+mem set 0x3fffff80 32 0x00000001
+
+# ;*Writing to On-Chip Data-Retention RAM is enabled.
+# ;SYSCR3.RRAMWE3=RRAMWE2=RRAMWE1=RRAMWE0=1
+memory set S:0xFCFE0408 0 {(unsigned char)0x0F}
+x/1b 0xfcfe0408

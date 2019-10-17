@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+environment/project/com.renesas.cdt.rz.debug.toolchain.22106942.1450865827/PATH/delimiter=;
+environment/project/com.renesas.cdt.rz.debug.toolchain.22106942.1450865827/PATH/operation=replace
+environment/project/com.renesas.cdt.rz.debug.toolchain.22106942.1450865827/PATH/value=C\:\\Renesas\\GNU-Tools_MinGW\\bin
+environment/project/com.renesas.cdt.rz.debug.toolchain.22106942.1450865827/append=true
+environment/project/com.renesas.cdt.rz.debug.toolchain.22106942.1450865827/appendContributed=true

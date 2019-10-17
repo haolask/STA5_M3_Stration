@@ -1,0 +1,8 @@
+Archive member included because of file (symbol)
+
+C:\Renesas\KPIT\GNUARM-RZv13.01-EABI\arm-rz-eabi\arm-rz-eabi\lib\gcc\arm-rz-eabi\4.7-GNUARM-RZ_v13.01\fpu\libgcc.a(_udivsi3.o)
+                              ../Release/Sources/APP/CORE/VM/standard/t5vm.o (__aeabi_uidiv)
+C:\Renesas\KPIT\GNUARM-RZv13.01-EABI\arm-rz-eabi\arm-rz-eabi\lib\gcc\arm-rz-eabi\4.7-GNUARM-RZ_v13.01\fpu\libgcc.a(_divsi3.o)
+                              ../Release/Sources/APP/CORE/VM/standard/t5vmstf.o (__aeabi_idiv)
+C:\Renesas\KPIT\GNUARM-RZv13.01-EABI\arm-rz-eabi\arm-rz-eabi\lib\gcc\arm-rz-eabi\4.7-GNUARM-RZ_v13.01\fpu\libgcc.a(_dvmd_tls.o)
+                              C:\Renesas\KPIT\GNUARM-RZv13.01-EABI\arm-rz-eabi\arm-rz-eabi\lib\gcc\arm-rz-eabi\4.7-GNUARM-RZ_v13.01\fpu\libgcc.a(_udivsi3.o) (__aeabi_idiv0)

@@ -1,0 +1,167 @@
+/******************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only
+* intended for use with Renesas products. No other uses are authorized. This
+* software is owned by Renesas Electronics Corporation and is protected under
+* all applicable laws, including copyright laws.
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING
+* THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT
+* LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+* AND NON-INFRINGEMENT. ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS
+* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE
+* FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR
+* ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE
+* BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software
+* and to discontinue the availability of this software. By using this software,
+* you agree to the additional terms and conditions found by accessing the
+* following link:
+* http://www.renesas.com/disclaimer
+*
+* Copyright (C) 2014 Renesas Electronics Corporation. All rights reserved.
+******************************************************************************/
+/******************************************************************************
+* System Name : RZ/A1H R7S72100 Sample Program
+* File Name   : Description.txt
+******************************************************************************/
+/******************************************************************************
+* History     : Nov 29, 2013 Rev.1.00.00     Initial documentation
+              : Mar 21, 2014 Rev.2.00.00     Updated documentation
+******************************************************************************/
+
+1. Before Use
+
+  This sample program has been written for and tested upon the RSK+RZA1 board 
+  RSK2+RZA1H ROK77210C000BE.  
+
+  ****************************** CAUTION ******************************
+   This sample program is for reference only. Please use this sample 
+   program for technical reference.
+  ****************************** CAUTION ******************************
+
+
+2. System Requirements
+  The system requirements for this sample program are listed below.
+
+    CPU                      : RZ/A1H
+    Evaluation board         : ROK77210C000BE (CPU board)
+    Toolchain                : GNU 4.7-GNUARM-RZ_v13.01
+    Development environment  : ARM Development Studio 5
+                               ARM DS-5 (DS-5 Renesas Starter Kit) 
+                               Version 5.15.0
+                                          
+3. Operation Confirmation Conditions
+  
+  (1) Operating frequency
+      The RZ/A1H clock pulse oscillator is set to see that the RZ/A1H clocks 
+      on the CPU board RTK772100BC00000BR have the following frequencies. 
+      (The frequencies indicate the values in the state that the clock with 
+      13.33MHz is input to the EXTAL pin in RZ/A1H clock mode 0.)
+      - Maximum operating frequency     : 400MHz
+      - Image processing clock          : 266.67MHz
+      - Internal bus clock              : 133.33MHz
+      - Peripheral clock1               : 66.67MHz
+      - Peripheral clock0               : 33.33MHz
+
+  (2) Linker file configuration
+      GNU_DS-5-QSPI.ld - Program loaded, and execution from serial flash. (Default)
+      GNU_DS-5-IRAM.ld - Program loaded, and execution from internal memory. 
+                  
+  (3) Setting for asynchronous communication if supported.      
+      A serial terminal is provided via the on board USB to Serial converter
+      using an Renesas RL78/G1C device. A driver for this was installed with
+      the RSK+, and is available on the RSK+ CD image.
+      The serial terminal functions with multiple baud rates, but was tested
+      and verified with 115200 baud.
+  
+  (4) Setting for cache  
+      Initial setting for L1 cache is executed by MMU. Refer to the 
+      application note "Setting for MMU" for valid/invalid area of L1 cache.
+      This sample program does not provide L2 cache setting.
+
+4. Operational Procedure
+
+  Use the following procedure to execute this sample program.
+
+  (1)   Setting for DIP switches and jumpers
+        Set the  DIP switches and jumpers of the RTK772100BC00000BR as follows.
+
+        SW4   - SW4-1 OFF, SW4-2 OFF, SW4-3 OFF, SW4-4 OFF, 
+                SW4-5 OFF, SW4-6 OFF, SW4-7 OFF, SW4-8 OFF
+				
+		If using the GNU_DS-5-QSPI.ld file, set SW6 as follows:		
+        SW6   - SW6-1 OFF, SW6-2 ON, SW6-3 OFF, SW6-4 ON, SW6-5 ON, SW6-6 ON
+		
+		If using the GNU_DS-5-IRAM.ld file, set SW6 as follows:		
+        SW6   - SW6-1 ON, SW6-2 ON, SW6-3 ON, SW6-4 ON, SW6-5 ON, SW6-6 ON
+        
+        All Jumpers shall not be fitted with the following exceptions
+           JP11 1-2 connected
+           JP12 1-2 connected
+           JP21 1-2 connected
+           JP18 1-2 connected
+           
+  ****************************** CAUTION ******************************
+        Ensure the PWR_SEL jumper is set correctly, when set to 2-3 
+        the application of more than 5V will destroy the devices on 
+        the board.
+        PWR_SEL 2-3 connected (5V)
+  ****************************** CAUTION ******************************
+     
+  (2) Setting up the sample program
+      Copy the [RZ_A1H_Tutorial_RSK] directory into the DS-5 work space
+      directory of the host PC.
+
+  (3) Activating integrated development environment
+      Start integrated development environment DS-5.
+      Import the sample project into a workspace as described in the tutorial
+      manual.
+
+  (4) Building [RZ_A1H_Tutorial_RSK] project
+      After importing [RZ_A1H_Tutorial_RSK] project, select the appropriate
+      build configuration for your requirements, if in doubt select Debug. Then
+      build the [RZ_A1H_Tutorial_RSK] project to generate the executable
+      file RZ_A1H_Tutorial_RSK.x.
+
+  (5) Connecting with emulator
+      Connect the emulator and the CPU board RTK772100BC00000BR. 
+      Set the Debugger configuration as required in the tutorial manual for the
+      build configuration. 
+
+  (6) Downloading sample program
+      Write the load module (RZ_A1H_Tutorial_RSK.x) of the sample program
+      to the RAM using download function of the emulator.
+
+  (7) Executing sample program
+      Use the IDE to execute the sample program after the downloading is 
+      completed.
+
+  (8-1) This sample runs the Tutorial sample code, please refer to the Tutorial documentation
+        r20ut2845eg0200_rsk+rza1h_tutorialmanual to describe the operation of this sample and 
+		for information on generating a binary file for the Debug build configuration.
+    
+  Executing Debug Version from QSPI
+  =================================
+
+  (9) The debug version built above executes in RAM. This can be loaded into QSPI so that
+      it executes in start-up. The boot loader will copy the code from QSPI into RAM and 
+      run it.
+ (10) End the debug session. From the project directory execute LoadTutorialToQSPI.bat file.
+ (11) Select option 1 Debug to load the debug generated file into QSPI.
+ (12) Switch OFF the power, after at least 10 seconds, switch it ON. The Tutorial sample will run 
+      by itself. NOTE: The board comes with boot loader present in the QSPI. If this has been
+      altered in any way, then reload it from the RZ_A1H_QSPI_LOADER sample.
+      
+  Executing Release Version from QSPI
+  ===================================
+ 
+ (13) Build the project with Release configuration. This will generate RZ_A1H_QSPI_LOADER.bin 
+      file in the project release directory.
+ (10) Execute LoadTutorialToQSPI.bat file from the project directory. Select option 2 for release. 
+ (13) Restart the board, and the Tutorial Sample will run from the QSPI. This time it will not
+      transfer the code into RAM. 
+              
+ Please see the Tutorial and User Manuals for more information on programming the QSPI.
+      
+/* End of File */

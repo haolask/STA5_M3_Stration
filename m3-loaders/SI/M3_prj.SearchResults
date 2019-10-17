@@ -1,0 +1,36 @@
+---- DRAM Matches (35 in 14 files) ----
+CSE_ext_UT_vectors.c (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\drivers\hsm\test\generic\src):        {"CORE0 DRAM"},
+CSE_ext_UT_vectors.c (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\drivers\hsm\test\generic\src):        {"CORE1 DRAM"},
+CSE_ext_UT_vectors.c (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\drivers\hsm\test\generic\src):        {"CORE2 DRAM"},
+M3_mini.ld (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\src):  DRAM (wx) : ORIGIN = 0xa0000000, LENGTH = 0x20000000
+M3_mini.ld (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\src):  __DRAM_start = ORIGIN(DRAM);
+M3_mini.ld (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\src):  } > DRAM
+M3_mini.ld (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\src):  } > DRAM
+M3_mini.ld (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\src):  } > DRAM
+M3_os.ld (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\src):  DRAM (wx) : ORIGIN = 0xa0000000, LENGTH = 0x20000000
+M3_os.ld (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\src):  __DRAM_start = ORIGIN(DRAM);
+M3_os.ld (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\src):  } > DRAM
+M3_os.ld (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\src):  } > DRAM
+M3_os.ld (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\src):  } > DRAM
+M3_xloader.ld (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\src):  DRAM (wx) : ORIGIN = 0xa0000000, LENGTH = 0x20000000
+M3_xloader.ld (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\src):  __DRAM_start = ORIGIN(DRAM);
+M3_xloader.ld (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\src):  } > DRAM
+M3_xl_uflashloader.ld (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\src):  DRAM (wx) : ORIGIN = 0xa0000000, LENGTH = 0x20000000
+M3_xl_uflashloader.ld (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\src):  __DRAM_start = ORIGIN(DRAM);
+M3_xl_uflashloader.ld (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\src):  } > DRAM
+M3_xl_uflashloader.ld (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\src):  } > DRAM
+Sta1385_ddr3_ctl.c (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\drivers\sta_fwlib\src):	 * the DRAM.
+Sta1385_ddr3_publ.c (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\drivers\sta_fwlib\src):				(bist_mode == BIST_DRAM_MODE ? "DRAM mode" : "Loopback mode"), l);
+Sta1385_ddr3_publ.c (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\drivers\sta_fwlib\src):	/* bist in DRAM mode needs training to be done,
+Sta1385_ddr3_publ.c (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\drivers\sta_fwlib\src):		/* in loopback mode, DRAM init is skipped */
+Sta1385_lpddr2_ctl.c (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\drivers\sta_fwlib\src):	 * the DRAM.
+Sta1385_lpddr2_publ.c (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\drivers\sta_fwlib\src):			     (bist_mode == BIST_DRAM_MODE ? "DRAM mode" : "Loopback mode"), l);
+Sta1x95_ddr3_ctl.c (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\drivers\sta_fwlib\src):	 * the DRAM.
+Sta1x95_ddr3_pub.c (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\drivers\sta_fwlib\src): * kind of BIST sequences (DRAM or Loopback mode), with different kind of
+Sta1x95_ddr3_pub.c (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\drivers\sta_fwlib\src):				(bist_mode == BIST_DRAM_MODE ? "DRAM mode" : "Loopback mode"), l);
+Sta1x95_ddr3_pub.c (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\drivers\sta_fwlib\src):	/* bist in DRAM mode needs training to be done,
+Sta1x95_ddr3_pub.c (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\drivers\sta_fwlib\src):		/* BIST loopback mode, skip DRAM init */
+Sta_common.h (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\include):/* DRAM Trusted area specified as valid external memory range */
+Sta_common.h (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\include):/* No trusted external DRAM defined so only internal eSRAM is specified */
+Sta_xloader.c (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\src):	 * So M3 OS is split in 2 parts and .rodata are loaded in DRAM.
+Sta_xl_uflashloader.c (z:\media\fangyunmeng\aaf25985-716c-4ff7-b650-fe8683e96b69\work\02_sta5\code\sta5_git\sources\m3-loaders\src):		/* uncompress AP code in DRAM */
