@@ -9,6 +9,12 @@
 #        AUTHOR: Philippe LANGLAIS
 #  ORGANIZATION: ST
 #=============================================================================
+
+# add by fangyunmeng for env config
+export PATH="$PWD/../gcc-arm-none-eabi-5_2-2015q4/bin:$PATH"
+export STA_MEM_MAP_DIR=$PWD/../sta_mem_map
+
+
 if [ -z $STA_MEM_MAP_DIR ]
 then
 	echo "Please, setup STA_MEM_MAP_DIR environment variable and make sure it includes a sta_mem_map.h file."
@@ -30,5 +36,5 @@ fi
 
 cd build
 cmake -G"Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE=cmake/Toolchain-gcc-arm-none-eabi.cmake -DSTA_MEM_MAP_DIR=$STA_MEM_MAP_DIR ..
-make
+make -j8
 
